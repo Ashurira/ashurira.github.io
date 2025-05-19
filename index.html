@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GHZL</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">GHZL</div>
+
+  <!-- Hamburger and Close icons -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Slide-in nav menu -->
+  <ul class="nav-links" id="navMenu">
+    <li><a href="#about" onclick="closeMenu()">About</a></li>
+    <li><a href="#products" onclick="closeMenu()">Products</a></li>
+    <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
+    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+  </ul>
+</nav>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay hidden"></div>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" id="hamburger">
+    &#9776;
+  </div>
+
+  <!-- Navigation Links -->
+  <ul class="nav-links" id="navMenu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+  <!-- Overlay -->
+  <div id="overlay" class="overlay hidden"></div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Elevate Your Style</h1>
+      <p>Inspired by luxury. Designed for every day.</p>
+      <a href="#products" class="cta-button">Shop Now</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>We’re a fashion brand redefining minimal elegance for the modern world.</p>
+  </section>
+  <!-- ✅ Products Section -->
+<section id="products" class="section">
+  <h2>Featured Collections</h2>
+  <div class="features">
+    <div class="feature">
+      <h3>New Arrivals</h3>
+      <p>Explore our latest fashion-forward styles and essentials.</p>
+    </div>
+    <div class="feature">
+      <h3>Best Sellers</h3>
+      <p>Our most-loved items, trusted by thousands of customers.</p>
+    </div>
+    <div class="feature">
+      <h3>Limited Editions</h3>
+      <p>Exclusive designs that make you stand out from the crowd.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Gallery Section -->
+<section id="gallery" class="section">
+  <h2>Style Gallery</h2>
+  <p>See how our customers style their favorite GHZL outfits around the world.</p>
+</section>
+
+<!-- ✅ Contact Section -->
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <p>Got a question or want to collaborate? Reach out to us anytime.</p>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Glam Brand. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+<script src="script.js"></script>
