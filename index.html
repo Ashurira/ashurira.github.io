@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GHZL</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+<body>
 
 <!-- Lightbox Overlay -->
 <div id="lightbox" class="lightbox hidden">
@@ -16,21 +18,18 @@
     <img id="lightbox-img" src="" alt="Preview">
     <p id="lightbox-counter" class="lightbox-counter"></p>
     <p id="lightbox-caption" class="lightbox-caption"></p>
+    <a href="#products" class="back-to-products">Back</a>
   </div>
 </div>
 
 <!-- Navbar -->
 <nav class="navbar">
   <div class="logo">GHZL</div>
-
-  <!-- Hamburger and Close icons -->
   <div class="hamburger" id="hamburger">
     <span></span>
     <span></span>
     <span></span>
   </div>
-
-  <!-- Slide-in nav menu -->
   <ul class="nav-links" id="navMenu">
     <li><a href="#about" onclick="closeMenu()">About</a></li>
     <li><a href="#products" onclick="closeMenu()">Products</a></li>
@@ -39,37 +38,36 @@
   </ul>
 </nav>
 
-  <!-- Overlay -->
-  <div id="overlay" class="overlay hidden"></div>
+<!-- Overlay -->
+<div id="overlay" class="overlay hidden"></div>
 
-  <!-- Navigation Links -->
-  <ul class="nav-links" id="navMenu">
-    <li><a href="#about">About</a></li>
-    <li><a href="#products">Products</a></li>
-    <li><a href="#gallery">Gallery</a></li>
-    <li><a href="#contact">Contact</a></li>
+<!-- Hero Section -->
+<header class="hero">
+  <div class="hero-content">
+    <h1>Imagination to Reality.</h1>
+    <p>Inspired by luxury. Designed for every day.</p>
+    <a href="#products" class="cta-button">Shop Now</a>
+  </div>
+</header>
+
+<!-- About Section -->
+<section id="about" class="section">
+  <h2>Who We Are</h2>
+  <p class="tagline">Shaping Ideas into Reality — One Layer at a Time.</p>
+
+  <p>
+    GHZL is a premier 3D printing service based in the UAE, dedicated to delivering high-quality, custom-made creations tailored to your vision. From personalized gifts to functional prototypes, we transform ideas into tangible products with accuracy, creativity, and advanced technology. Whether you're a designer, entrepreneur, or simply exploring a unique concept — GHZL brings your vision to life, one layer at a time.
+  </p>
+
+  <ul class="brand-values">
+    <li>Custom Design Services</li>
+    <li>High-Quality 3D Printing</li>
+    <li>Local UAE Delivery</li>
   </ul>
-</nav>
-  <!-- Overlay -->
-  <div id="overlay" class="overlay hidden"></div>
+</section>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Imagination to Reality.</h1>
-      <p>Inspired by luxury. Designed for every day.</p>
-      <a href="#products" class="cta-button">Shop Now</a>
-    </div>
-  </header>
-
-  <!-- About Section -->
-  <section id="about" class="section">
-    <h2>About Us</h2>
-    <p>We’re a fashion brand redefining minimal elegance for the modern world.</p>
-  </section>
-
-  <!-- ✅ Products Section -->
-  <section id="products" class="section">
+<!-- Products Section -->
+<section id="products" class="section">
   <h2>Featured Collections</h2>
   <div class="features">
     <div class="feature">
@@ -96,22 +94,101 @@
   </div>
 </section>
 
-<!-- ✅ Gallery Section -->
+<!-- Gallery Section -->
 <section id="gallery" class="section">
   <h2>Style Gallery</h2>
   <p>See how our customers style their favorite GHZL outfits around the world.</p>
 </section>
 
-<!-- ✅ Contact Section -->
+<!-- Contact Section -->
 <section id="contact" class="section">
   <h2>Contact Us</h2>
-  <p>Got a question or want to collaborate? Reach out to us anytime.</p>
+  <p>Got a question or want to collaborate? Reach out anytime.</p>
+
+  <form id="contactForm" class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <p id="formResponse" class="form-response"></p>
 </section>
 
-  <!-- Footer -->
-  <footer class="footer">
+<!-- Newsletter Signup -->
+<section class="newsletter" id="newsletterContainer">
+  <button id="newsletterButton" class="newsletter-toggle">
+    <i class="fas fa-envelope-open-text"></i> Sign up to our newsletter
+  </button>
+
+  <form id="newsletterForm" class="newsletter-form hidden">
+    <input type="email" name="user_email" placeholder="Enter your email" required />
+    <button type="submit">Subscribe</button>
+  </form>
+
+  <p id="newsletterResponse" class="form-response">
+    <span id="checkmark" class="checkmark hidden">
+      <i class="fas fa-check-circle"></i>
+    </span>
+    <span id="responseText" class="hidden"></span>
+  </p>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h3>GHZL</h3>
+      <p>Custom 3D printing services in the UAE. Turning your ideas into reality, layer by layer.</p>
+    </div>
+
+    <div class="footer-socials">
+      <h4>Connect With Us</h4>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/ghzl" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/ghzl" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://wa.me/971XXXXXXXXX" target="_blank" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/ghzl" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Get in Touch</h4>
+      <p><i class="fas fa-envelope"></i> <a href="mailto:ghzlworks@gmail.com">ghzlworks@gmail.com</a></p>
+      <p><i class="fas fa-map-marker-alt"></i> Abu Dhabi, UAE</p>
+    </div>
+  </div> <!-- 🔁 end of .footer-container -->
+
+  <!-- ✅ Move this OUTSIDE the container -->
+  <div class="footer-bottom">
     <p>&copy; 2025 GHZL. All rights reserved.</p>
-  </footer>
+  </div>
+</footer>
+
+<!-- Scroll-to-Top Button -->
+<button id="scrollToTop" class="scroll-to-top hidden">&#8679;</button>
+
+<!-- Toast Notification -->
+<div id="toast" class="toast hidden">
+  <i class="fas fa-check-circle"></i>
+  <span id="toastMessage">You're subscribed!</span>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("4REAvUIbtZ6Mie-RO"); // Replace with your actual public key
+  })();
+</script>
+
 
 <script src="script.js"></script>
 </body>

@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = isOpen ? 'auto' : 'hidden';
   });
 
+  
+
   overlay.addEventListener('click', () => {
     navMenu.classList.remove('show');
     overlay.classList.add('hidden');
@@ -126,4 +128,87 @@ document.addEventListener('DOMContentLoaded', () => {
       else showPrev();          // swipe right
     }
   });
+
+const scrollToTopBtn = document.getElementById('scrollToTop');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      scrollToTopBtn.classList.remove('hidden');
+  } else {
+      scrollToTopBtn.classList.add('hidden');
+  }
+  });
+
+scrollToTopBtn.addEventListener('click', () =>
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+);
+
+const contactForm = document.getElementById('contactForm');
+const responseMsg = document.getElementById('formResponse');
+
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_blq6k75', 'template_4ld894m', this)
+      .then(() => {
+        responseMsg.textContent = "Message sent successfully!";
+        responseMsg.style.color = "green";
+        contactForm.reset();
+      }, (error) => {
+        responseMsg.textContent = "Something went wrong. Please try again.";
+        responseMsg.style.color = "red";
+        console.error('EmailJS failed:', error);
+      });
+  });
+});
+
+const newsletterButton = document.getElementById('newsletterButton');
+const newsletterForm = document.getElementById('newsletterForm');
+const toast = document.getElementById('toast');
+const toastMessage = document.getElementById('toastMessage');
+
+let submitted = false;
+
+// Show the form on click
+newsletterButton.addEventListener('click', () => {
+  if (!submitted) {
+    newsletterForm.classList.remove('hidden');
+    newsletterButton.classList.add('hidden');
+  }
+});
+
+// Show toast function
+function showToast(message = "You're subscribed!") {
+  toastMessage.textContent = message;
+  toast.classList.remove("hidden");
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+    setTimeout(() => toast.classList.add("hidden"), 400); // Wait for transition
+  }, 3000);
+}
+
+// Handle form submission
+newsletterForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  // Optional: disable button, show loader, etc.
+  emailjs.sendForm('service_blq6k75', 'template_b7fbev9', this)
+    .then(() => {
+      newsletterForm.reset();
+      submitted = true;
+
+      newsletterForm.classList.add('hidden');
+      newsletterButton.classList.remove('hidden');
+
+      showToast("You're subscribed!");
+    })
+    .catch((error) => {
+      console.error("EmailJS Error:", error);
+      showToast("⚠️ Subscription failed. Please try again.");
+    });
 });
