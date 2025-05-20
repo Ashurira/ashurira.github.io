@@ -165,6 +165,7 @@ const responseMsg = document.getElementById('formResponse');
   });
 });
 
+// Newsletter elements
 const newsletterButton = document.getElementById('newsletterButton');
 const newsletterForm = document.getElementById('newsletterForm');
 const toast = document.getElementById('toast');
@@ -172,7 +173,7 @@ const toastMessage = document.getElementById('toastMessage');
 
 let submitted = false;
 
-// Show the form on click
+// Show the form when the button is clicked
 newsletterButton.addEventListener('click', () => {
   if (!submitted) {
     newsletterForm.classList.remove('hidden');
@@ -180,7 +181,7 @@ newsletterButton.addEventListener('click', () => {
   }
 });
 
-// Show toast function
+// Show toast notification
 function showToast(message = "You're subscribed!") {
   toastMessage.textContent = message;
   toast.classList.remove("hidden");
@@ -196,19 +197,20 @@ function showToast(message = "You're subscribed!") {
 newsletterForm.addEventListener('submit', function (e) {
   e.preventDefault();
 
-  // Optional: disable button, show loader, etc.
   emailjs.sendForm('service_blq6k75', 'template_b7fbev9', this)
     .then(() => {
       newsletterForm.reset();
       submitted = true;
 
+      // Hide form and show button again if needed
       newsletterForm.classList.add('hidden');
       newsletterButton.classList.remove('hidden');
 
-      showToast("You're subscribed!");
+      showToast("✅ You're subscribed!");
     })
     .catch((error) => {
       console.error("EmailJS Error:", error);
-      showToast("⚠️ Subscription failed. Please try again.");
+      showToast("⚠️ Subscription failed. Try again.");
     });
 });
+

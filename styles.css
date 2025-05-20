@@ -105,14 +105,7 @@
     font-size: 32px;
     margin-bottom: 20px;
   }
-  
-  /* Footer */
-  .footer {
-    background-color: #000;
-    color: white;
-    text-align: center;
-    padding: 20px;
-  }
+    
   /* Responsive Navigation */
 .hamburger {
     display: none;
@@ -538,26 +531,6 @@ html {
   background-color: #e6e6e6;
 }
 
-#about {
-  background-color: #1c2e46;
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-#about .tagline {
-  font-size: 1.3em;
-  margin-bottom: 20px;
-  color: #cbd6e0;
-}
-
-#about p {
-  max-width: 75%;
-  margin: 0 auto 15px;
-  font-size: 1.1em;
-  line-height: 1.6;
-}
-
 .brand-values {
   list-style: none;
   padding: 0;
@@ -581,86 +554,6 @@ html {
   font-size: 14px;
 }
 
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer h3, .footer h4 {
-  color: #ffffff;
-  margin-bottom: 10px;
-}
-
-.footer p, .footer a {
-  color: #dcdcdc;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-links li {
-  margin: 6px 0;
-}
-
-.footer-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60px; /* Adjust height as needed */
-  text-align: center;
-  font-size: 13px;
-  color: #c8c8c8;
-  border-top: 1px solid #32455d;
-  background-color: #1c2e46; /* optional, to match rest of footer */
-}
-
-.footer-socials {
-  text-align: left;
-}
-
-.social-icons {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.social-icons a {
-  color: #dcdcdc;
-  font-size: 20px;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #ffffff;
-  transform: scale(1.2);
-}
-
-.footer-contact p {
-  margin: 8px 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 14px;
-}
-
-.footer-contact i {
-  color: #ffffff;
-  min-width: 16px;
-}
-
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
@@ -668,6 +561,70 @@ html {
   border-top: 1px solid #32455d;
   font-size: 13px;
   color: #c8c8c8;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 20px;
+  background-color: #1c2e46;
+  color: #fff;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-logo {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+}
+
+.social-icons a {
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-column p {
+  font-size: 14px;
+  color: #ccc;
+  margin: 6px 0;
+}
+
+.footer-column a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  color: #fff;
 }
 
 .form-response {
@@ -705,7 +662,7 @@ html {
   gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 0px;
 }
 
 .hidden {
@@ -801,4 +758,74 @@ html {
 
 .hidden {
   display: none;
+}
+
+.newsletter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px 0;
+  width: 100%; margin-top: 0;
+  padding-top: 0;
+}
+
+/* Toast notification */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1c2e46;
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.toast i {
+  color: #4BB543;
+  font-size: 18px;
+}
+
+.hidden {
+  display: none;
+}
+
+.footer-logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+  margin: 0;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

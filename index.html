@@ -31,8 +31,7 @@
     <span></span>
   </div>
   <ul class="nav-links" id="navMenu">
-    <li><a href="#about" onclick="closeMenu()">About</a></li>
-    <li><a href="#products" onclick="closeMenu()">Products</a></li>
+    <li><a href="#products" onclick="closeMenu()">Browse</a></li>
     <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
     <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
   </ul>
@@ -49,22 +48,6 @@
     <a href="#products" class="cta-button">Shop Now</a>
   </div>
 </header>
-
-<!-- About Section -->
-<section id="about" class="section">
-  <h2>Who We Are</h2>
-  <p class="tagline">Shaping Ideas into Reality — One Layer at a Time.</p>
-
-  <p>
-    GHZL is a premier 3D printing service based in the UAE, dedicated to delivering high-quality, custom-made creations tailored to your vision. From personalized gifts to functional prototypes, we transform ideas into tangible products with accuracy, creativity, and advanced technology. Whether you're a designer, entrepreneur, or simply exploring a unique concept — GHZL brings your vision to life, one layer at a time.
-  </p>
-
-  <ul class="brand-values">
-    <li>Custom Design Services</li>
-    <li>High-Quality 3D Printing</li>
-    <li>Local UAE Delivery</li>
-  </ul>
-</section>
 
 <!-- Products Section -->
 <section id="products" class="section">
@@ -115,56 +98,51 @@
 </section>
 
 <!-- Newsletter Signup -->
-<section class="newsletter" id="newsletterContainer">
-  <button id="newsletterButton" class="newsletter-toggle">
-    <i class="fas fa-envelope-open-text"></i> Sign up to our newsletter
-  </button>
+<section class="newsletter">
+  <div class="newsletter-container">
+    <button id="newsletterButton" class="newsletter-toggle">
+      <i class="fas fa-envelope-open-text"></i> Sign up to our newsletter
+    </button>
 
-  <form id="newsletterForm" class="newsletter-form hidden">
-    <input type="email" name="user_email" placeholder="Enter your email" required />
-    <button type="submit">Subscribe</button>
-  </form>
-
-  <p id="newsletterResponse" class="form-response">
-    <span id="checkmark" class="checkmark hidden">
-      <i class="fas fa-check-circle"></i>
-    </span>
-    <span id="responseText" class="hidden"></span>
-  </p>
+    <form id="newsletterForm" class="newsletter-form hidden">
+      <input type="email" name="user_email" placeholder="Enter your email" required />
+      <button type="submit">
+        <i class="fas fa-paper-plane"></i> Subscribe
+      </button>
+    </form>
+  </div>
 </section>
 
 <!-- Footer -->
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-brand">
-      <h3>GHZL</h3>
-      <p>Custom 3D printing services in the UAE. Turning your ideas into reality, layer by layer.</p>
-    </div>
+<div class="footer-content">
+  <!-- Left: Logo + Tagline -->
+  <div class="footer-column">
+    <h3 class="footer-logo">GHZL</h3>
+    <p class="footer-tagline">
+      Custom 3D printing services in the UAE.<br>
+      Turning your ideas into reality, layer by layer.
+    </p>
+  </div>
 
-    <div class="footer-socials">
-      <h4>Connect With Us</h4>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/ghzl" target="_blank" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.facebook.com/ghzl" target="_blank" aria-label="Facebook">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://wa.me/971XXXXXXXXX" target="_blank" aria-label="WhatsApp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/ghzl" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </div>
+  <!-- Center: Social Media -->
+  <div class="footer-column center-column">
+    <h4>CONNECT WITH US</h4>
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://wa.me/971XXXXXXXXX" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
     </div>
+  </div>
 
-    <div class="footer-contact">
-      <h4>Get in Touch</h4>
-      <p><i class="fas fa-envelope"></i> <a href="mailto:ghzlworks@gmail.com">ghzlworks@gmail.com</a></p>
-      <p><i class="fas fa-map-marker-alt"></i> Abu Dhabi, UAE</p>
-    </div>
-  </div> <!-- 🔁 end of .footer-container -->
+  <!-- Right: Contact Info -->
+  <div class="footer-column right-column">
+    <h4>GET IN TOUCH</h4>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:ghzlworks@gmail.com">ghzlworks@gmail.com</a></p>
+    <p><i class="fas fa-map-marker-alt"></i> Abu Dhabi, UAE</p>
+  </div>
+</div>
+<!-- 🔁 end of .footer-container -->
 
   <!-- ✅ Move this OUTSIDE the container -->
   <div class="footer-bottom">
