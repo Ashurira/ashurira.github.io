@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | GHZL</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="products-page">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">GHZL</div>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="navMenu">
+      <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+    </ul>
+  </nav>
+
+  <!-- Overlay for mobile menu -->
+  <div id="overlay" class="overlay hidden"></div>
+
+  <!-- Product Section -->
+  <section class="categories">
+    <h2>Shop by Category</h2>
+    <div class="category-grid">
+      <div class="category-card">
+        <a href="keychains.html">
+          <img src="https://i.imgur.com/S1yxKMb.jpeg" alt="Keychains">
+          <h3>Custom Keychains</h3>
+        </a>
+      </div>
+      <div class="category-card">
+        <a href="piggybanks.html">
+          <img src="https://i.imgur.com/S1yxKMb.jpeg" alt="Piggy Banks">
+          <h3>Custom Piggy Banks</h3>
+        </a>
+      </div>
+      <div class="category-card">
+        <a href="magnets.html">
+          <img src="https://i.imgur.com/S1yxKMb.jpeg" alt="Magnets">
+          <h3>Refrigerator Magnets</h3>
+        </a>
+      </div>
+      <div class="category-card">
+        <a href="minitoys.html">
+          <img src="https://i.imgur.com/S1yxKMb.jpeg" alt="Mini Toys">
+          <h3>Mini Toys</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>&copy; 2025 GHZL. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

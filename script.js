@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = isOpen ? 'auto' : 'hidden';
   });
 
-  
-
   overlay.addEventListener('click', () => {
     navMenu.classList.remove('show');
     overlay.classList.add('hidden');
