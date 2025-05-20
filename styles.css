@@ -550,7 +550,7 @@ html {
 .footer {
   background-color: #1c2e46;
   color: #ffffff;
-  padding: 40px 20px 10px;
+  padding: 20px 20px 10px;
   font-size: 14px;
 }
 
@@ -567,7 +567,23 @@ html {
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; /* or center if you prefer */
+    text-align: left;
+  }
+
+  .footer-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    text-align: left; /* Optional: use center if you want all centered on mobile */
+  }
+
+  .social-icons {
+    justify-content: flex-start;
   }
 }
 
@@ -579,31 +595,24 @@ html {
   padding: 40px 20px;
   background-color: #1c2e46;
   color: #fff;
+  gap: 20px;
 }
 
 .footer-column {
   flex: 1;
-  min-width: 220px;
-  margin: 10px;
+  min-width: 260px;
 }
 
+/* Left */
 .footer-left {
-  text-align: left;
-}
-
-.footer-center {
   text-align: center;
-}
-
-.footer-right {
-  text-align: right;
 }
 
 .footer-logo {
   font-size: 28px;
   font-weight: 700;
-  color: #fff;
   margin-bottom: 10px;
+  color: #fff;
 }
 
 .footer-tagline {
@@ -612,31 +621,51 @@ html {
   line-height: 1.6;
 }
 
-.footer-column h4 {
+/* Center */
+.footer-center {
+  text-align: center;
+}
+
+.footer-center h4 {
   font-size: 16px;
-  margin-bottom: 12px;
-  color: #fff;
+  margin-bottom: 10px;
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  font-size: 25px;
+  gap: 15px;
+  font-size: 18px;
+}
+
+.social-icons a {
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+/* Right */
+.footer-right {
+  text-align: center;
+}
+
+.footer-right h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .footer-right p,
-.footer-right a,
-.footer-center p,
-.footer-center a {
-  color: #ccc;
+.footer-right a {
   font-size: 14px;
-  margin: 6px 0;
+  color: #ccc;
+  margin: 5px 0;
   text-decoration: none;
 }
 
-.footer-right a:hover,
-.footer-center a:hover {
+.footer-right a:hover {
   color: #fff;
 }
 
@@ -825,7 +854,7 @@ html {
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 10px;
-  text-align: left;
+  text-align: center;
 }
 
 .footer-tagline {
@@ -833,6 +862,6 @@ html {
   color: #ccc;
   line-height: 1.6;
   margin: 0;
-  text-align: left;
+  text-align: center;
 }
 
