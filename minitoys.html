@@ -4,33 +4,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mini Toys</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="toy-page">
 
-  <header>
+  <header class="toy-header">
+    <div class="toy-nav">
+      <div class="logo">GHZL</div>
+      <nav class="toy-nav-links">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
     <h1>Mini Toys</h1>
-    <a href="products.html" class="back-btn">← Back to Categories</a>
   </header>
 
-  <section class="products-grid">
+  <main class="toy-main">
+    <section class="toy-grid">
 
-    <div class="product-card">
-      <img src="images/minitoys1.jpg" alt="Mini Bear">
-      <h3>Mini Bear</h3>
-      <button>Inquire Now</button>
+      <div class="toy-card">
+        <img src="images/toy1.jpg" alt="Mini Bear">
+        <h3>Mini Bear</h3>
+        <button>Add to Cart</button>
+      </div>
+      <div class="toy-card">
+        <img src="images/toy2.jpg" alt="Mini Robot">
+        <h3>Mini Robot</h3>
+        <button>Add to Cart</button>
+      </div>
+      <div class="toy-card">
+        <img src="images/toy3.jpg" alt="Mini Car">
+        <h3>Mini Car</h3>
+        <button>Add to Cart</button>
+      </div>
+    </section>
+    <div class="toy-back">
+      <a href="products.html">← Back to All Categories</a>
     </div>
-    <div class="product-card">
-      <img src="images/minitoys2.jpg" alt="Mini Robot">
-      <h3>Mini Robot</h3>
-      <button>Inquire Now</button>
-    </div>
-    <div class="product-card">
-      <img src="images/minitoys3.jpg" alt="Mini Car">
-      <h3>Mini Car</h3>
-      <button>Inquire Now</button>
-    </div>
-  </section>
+  </main>
+
+  <footer class="toy-footer">
+    <p>© 2025 GHZL Mini Toys. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>

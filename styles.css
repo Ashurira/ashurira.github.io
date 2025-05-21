@@ -473,17 +473,6 @@
   text-align: center;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-html, body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
@@ -979,10 +968,16 @@ html, body {
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
-  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -1175,4 +1170,325 @@ body.piggy-page {
 
 .piggy-main {
   flex: 1;
+}
+
+
+body.keychain-page {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #2d2d2d;
+}
+
+.keychain-header {
+  background-color: #1c2e46;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.keychain-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.keychain-nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.keychain-main {
+  padding: 40px 20px;
+  flex: 1;
+}
+
+.keychain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.keychain-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.keychain-card:hover {
+  transform: translateY(-5px);
+}
+
+.keychain-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.keychain-card h3 {
+  margin: 15px 0 10px;
+  font-size: 1.1rem;
+}
+
+.keychain-card button {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: 2px solid #1c2e46;
+  border-radius: 6px;
+  color: #1c2e46;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.keychain-card button:hover {
+  background-color: #1c2e46;
+  color: white;
+}
+
+.keychain-back {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.keychain-back a {
+  color: #1c2e46;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.keychain-footer {
+  background-color: #1c2e46;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.keychain-page, .keychain-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+body.magnet-page {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #2d2d2d;
+}
+
+.magnet-header {
+  background-color: #1c2e46;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.magnet-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.magnet-nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.magnet-main {
+  padding: 40px 20px;
+  flex: 1;
+}
+
+.magnet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.magnet-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.magnet-card:hover {
+  transform: translateY(-5px);
+}
+
+.magnet-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.magnet-card h3 {
+  margin: 15px 0 10px;
+  font-size: 1.1rem;
+}
+
+.magnet-card button {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: 2px solid #1c2e46;
+  border-radius: 6px;
+  color: #1c2e46;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.magnet-card button:hover {
+  background-color: #1c2e46;
+  color: white;
+}
+
+.magnet-back {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.magnet-back a {
+  color: #1c2e46;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.magnet-footer {
+  background-color: #1c2e46;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.magnet-page, .magnet-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+body.toy-page {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #2d2d2d;
+}
+
+.toy-header {
+  background-color: #1c2e46;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.toy-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toy-nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.toy-main {
+  padding: 40px 20px;
+  flex: 1;
+}
+
+.toy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.toy-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.toy-card:hover {
+  transform: translateY(-5px);
+}
+
+.toy-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.toy-card h3 {
+  margin: 15px 0 10px;
+  font-size: 1.1rem;
+}
+
+.toy-card button {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: 2px solid #1c2e46;
+  border-radius: 6px;
+  color: #1c2e46;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.toy-card button:hover {
+  background-color: #1c2e46;
+  color: white;
+}
+
+.toy-back {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.toy-back a {
+  color: #1c2e46;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.toy-footer {
+  background-color: #1c2e46;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.toy-page, .toy-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
