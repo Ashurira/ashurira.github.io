@@ -14,7 +14,7 @@
       <nav class="toy-nav-links">
         <a href="../index.html">Home</a>
         <a href="../pages/minitoys.html">Products</a>
-        <a href="#contact">Contact</a>
+        <a href="../cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
       </nav>
     </div>
     <h1>Mini Toys</h1>
@@ -26,17 +26,35 @@
       <div class="toy-card">
         <img src="https://i.imgur.com/S1yxKMb.jpeg" alt="Mini Bear">
         <h3>Mini Bear</h3>
-        <button>Add to Cart</button>
+        <button onclick="addToCart({
+          id: 7,
+          name: 'Toy Bear',
+          price: 25,
+          image: 'https://i.imgur.com/S1yxKMb.jpeg',
+          qty: 1
+        })">Add to Cart</button>
       </div>
       <div class="toy-card">
         <img src="https://i.imgur.com/S1yxKMb.jpeg" alt="Mini Robot">
         <h3>Mini Robot</h3>
-        <button>Add to Cart</button>
+        <button onclick="addToCart({
+          id: 8,
+          name: 'Toy Robot',
+          price: 25,
+          image: 'https://i.imgur.com/S1yxKMb.jpeg',
+          qty: 1
+        })">Add to Cart</button>
       </div>
       <div class="toy-card">
         <img src="https://i.imgur.com/S1yxKMb.jpeg" alt="Mini Car">
         <h3>Mini Car</h3>
-        <button>Add to Cart</button>
+        <button onclick="addToCart({
+          id: 10,
+          name: 'Toy Car',
+          price: 20,
+          image: 'https://i.imgur.com/S1yxKMb.jpeg',
+          qty: 1
+        })">Add to Cart</button>
       </div>
     </section>
     <div class="toy-back">
@@ -48,5 +66,6 @@
     <p>© 2025 GHZL Mini Toys. All rights reserved.</p>
   </footer>
 
+  <script src="../script/cart.js"></script>
 </body>
 </html>

@@ -14,7 +14,7 @@
       <nav class="magnet-nav-links">
         <a href="../index.html">Home</a>
         <a href="../pages/products.html">Products</a>
-        <a href="#contact">Contact</a>
+        <a href="../cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
       </nav>
     </div>
     <h1>Refrigerator Magnets</h1>
@@ -26,17 +26,35 @@
       <div class="magnet-card">
         <img src="https://i.imgur.com/S1yxKMb.jpeg" alt="Fruit Magnet">
         <h3>Fruit Magnet</h3>
-        <button>Add to Cart</button>
+        <button onclick="addToCart({
+          id: 4,
+          name: 'Fruit Magnet',
+          price: 20,
+          image: 'https://i.imgur.com/S1yxKMb.jpeg',
+          qty: 1
+        })">Add to Cart</button>
       </div>
       <div class="magnet-card">
         <img src="https://i.imgur.com/S1yxKMb.jpeg" alt="Photo Magnet">
         <h3>Photo Magnet</h3>
-        <button>Add to Cart</button>
+        <button onclick="addToCart({
+          id: 5,
+          name: 'Photo Magnet',
+          price: 20,
+          image: 'https://i.imgur.com/S1yxKMb.jpeg',
+          qty: 1
+        })">Add to Cart</button>
       </div>
       <div class="magnet-card">
         <img src="https://i.imgur.com/S1yxKMb.jpeg" alt="Logo Magnet">
         <h3>Logo Magnet</h3>
-        <button>Add to Cart</button>
+        <button onclick="addToCart({
+          id: 6,
+          name: 'Logo Magnet',
+          price: 20,
+          image: 'https://i.imgur.com/S1yxKMb.jpeg',
+          qty: 1
+        })">Add to Cart</button>
       </div>
     </section>
     <div class="magnet-back">
@@ -48,5 +66,6 @@
     <p>© 2025 GHZL Refrigerator Magnets. All rights reserved.</p>
   </footer>
 
+  <script src="../script/cart.js"></script>
 </body>
 </html>

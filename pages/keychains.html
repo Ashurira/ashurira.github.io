@@ -14,7 +14,7 @@
       <nav class="keychain-nav-links">
         <a href="../index.html">Home</a>
         <a href="../pages/products.html">Products</a>
-        <a href="#contact">Contact</a>
+        <a href="../cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
       </nav>
     </div>
     <h1>Custom Keychains</h1>
@@ -26,17 +26,35 @@
       <div class="keychain-card">
         <img src="https://i.imgur.com/S1yxKMb.jpeg" alt="Heart Keychain">
         <h3>Heart Keychain</h3>
-        <button>Add to Cart</button>
+        <button onclick="addToCart({
+          id: 1,
+          name: 'Heart Keychain',
+          price: 15,
+          image: 'https://i.imgur.com/S1yxKMb.jpeg',
+          qty: 1
+        })">Add to Cart</button>
       </div>
       <div class="keychain-card">
         <img src="https://i.imgur.com/S1yxKMb.jpeg" alt="Name Tag Keychain">
         <h3>Name Tag Keychain</h3>
-        <button>Add to Cart</button>
+        <button onclick="addToCart({
+          id: 2,
+          name: 'Name Tag Keychain',
+          price: 15,
+          image: 'https://i.imgur.com/S1yxKMb.jpeg',
+          qty: 1
+        })">Add to Cart</button>
       </div>
       <div class="keychain-card">
         <img src="https://i.imgur.com/S1yxKMb.jpeg" alt="Photo Keychain">
         <h3>Photo Keychain</h3>
-        <button>Add to Cart</button>
+        <button onclick="addToCart({
+          id: 3,
+          name: 'Photo Keychain',
+          price: 15,
+          image: 'https://i.imgur.com/S1yxKMb.jpeg',
+          qty: 1
+        })">Add to Cart</button>
       </div>
     </section>
     <div class="keychain-back">
@@ -48,5 +66,6 @@
     <p>© 2025 GHZL Custom Keychains. All rights reserved.</p>
   </footer>
 
+  <script src="../script/cart.js"></script>
 </body>
 </html>

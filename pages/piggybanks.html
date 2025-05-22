@@ -14,7 +14,7 @@
       <nav class="piggy-nav-links">
         <a href="../index.html">Home</a>
         <a href="../pages/products.html">Products</a>
-        <a href="#contact">Contact</a>
+        <a href="../cart.html">🛒 Cart (<span id="cart-count">0</span>)</a>
       </nav>
     </div>
     <h1>Custom Piggy Banks</h1>
@@ -25,17 +25,35 @@
       <div class="piggy-card">
         <img src="https://i.imgur.com/S1yxKMb.jpeg" alt="Classic Piggy Bank">
         <h3>Classic Piggy Bank</h3>
-        <button>Add to Cart</button>
+        <button onclick="addToCart({
+          id: 10,
+          name: 'Classic Piggy Bank',
+          price: 25,
+          image: 'https://i.imgur.com/S1yxKMb.jpeg',
+          qty: 1
+        })">Add to Cart</button>
       </div>
       <div class="piggy-card">
         <img src="https://i.imgur.com/S1yxKMb.jpeg" alt="Transparent Coin Saver">
         <h3>Transparent Coin Saver</h3>
-        <button>Add to Cart</button>
+        <button onclick="addToCart({
+          id: 11,
+          name: 'Transparent Coing Saver',
+          price: 25,
+          image: 'https://i.imgur.com/S1yxKMb.jpeg',
+          qty: 1
+        })">Add to Cart</button>
       </div>
       <div class="piggy-card">
         <img src="https://i.imgur.com/S1yxKMb.jpeg" alt="Animal Piggy Bank">
         <h3>Animal Piggy Bank</h3>
-        <button>Add to Cart</button>
+        <button onclick="addToCart({
+          id: 12,
+          name: 'Animal Piggy Bank',
+          price: 25,
+          image: 'https://i.imgur.com/S1yxKMb.jpeg',
+          qty: 1
+        })">Add to Cart</button>
       </div>
     </section>
     <div class="piggy-back">
@@ -46,6 +64,6 @@
   <footer class="piggy-footer">
     <p>© 2025 GHZL Piggy Banks. All rights reserved.</p>
   </footer>
-
+  <script src="../script/cart.js"></script>
 </body>
 </html>
