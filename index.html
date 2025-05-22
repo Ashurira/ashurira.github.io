@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GHZL</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="../ashurira.github.io/css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -41,7 +43,7 @@
 <div id="overlay" class="overlay hidden"></div>
 
 <!-- Hero Section -->
-<header class="hero">
+<header class="hero" data-aos="fade-up">
   <div class="hero-overlay">
     <div class="hero-content">
       <h1>Imagination to Reality.</h1>
@@ -52,7 +54,7 @@
 </header>
 
 <!-- Products Section -->
-<section id="products" class="section">
+<section id="products" class="section" data-aos="fade-up">
   <h2>Featured Collections</h2>
   <div class="features">
     <div class="feature">
@@ -78,18 +80,24 @@
     </div>
   </div>
   <div class="browse-button-wrapper">
-    <a href="products.html" class="browse-button">Browse All Products</a>
+    <a href="../ashurira.github.io/pages/products.html" class="browse-button">Browse All Products</a>
   </div>
 </section>
 
+<!-- Why Choose Us -->
+<section class="section section-alt" data-aos="fade-up">
+  <h2>Why Choose Us</h2>
+  <p>We offer high-quality handmade products with love.</p>
+</section>
+
 <!-- Gallery Section -->
-<section id="gallery" class="section">
+<section id="gallery" class="section" data-aos="fade-up">
   <h2>Style Gallery</h2>
   <p>See how our customers style their favorite GHZL outfits around the world.</p>
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="section">
+<section id="contact" class="section" data-aos="fade-up">
   <h2>Contact Us</h2>
   <p>Got a question or want to collaborate? Reach out anytime.</p>
 
@@ -103,7 +111,7 @@
 </section>
 
 <!-- Newsletter Signup -->
-<section class="newsletter">
+<section class="newsletter" data-aos="fade-up">
   <div class="newsletter-container">
     <button id="newsletterButton" class="newsletter-toggle">
       <i class="fas fa-envelope-open-text"></i> Sign up to our newsletter
@@ -173,6 +181,13 @@
 </script>
 
 
-<script src="script.js"></script>
+<script src="../ashurira.github.io/script/script.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // animation duration
+    once: true      // only animate once
+  });
+</script>
 </body>
 </html>
